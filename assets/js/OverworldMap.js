@@ -129,8 +129,8 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/DemoLower.png",
-    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/DemoUpper.png",
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
+    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -155,86 +155,32 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "I'm busy..."},
-              { type: "textMessage", text: "Go away!"},
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
             ]
           }
         ]
       }),
     },
+  },
+  brainoutside: {
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/brain.gif",
+    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
+    gameObjects: {
+      hero: new Person({
+        isPlayerControlled: true,
+        x: utils.withGrid(3),
+        y: utils.withGrid(4),
+        sizex: 50,
+        sizey: 37,
+        id: "hero",
+      }),
+    },
     walls: {
-      wall1: new GameObject({
-        id: "wall1",
-        wall: true,
-        x: utils.withGrid(6),
-        y: utils.withGrid(5),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-      wall2: new GameObject({
-        id: "wall2",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(2),
-        sizex: utils.withGrid(10),
-        sizey: utils.withGrid(1),
-      }),
-      wall3: new GameObject({
-        id: "wall3",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(0),
-        sizey: utils.withGrid(6),
-      }),
-      wall4: new GameObject({
-        id: "wall4",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(9),
-        sizex: utils.withGrid(10),
-        sizey: utils.withGrid(0),
-      }),
-      wall5: new GameObject({
-        id: "wall5",
-        wall: true,
-        x: utils.withGrid(10),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(0),
-        sizey: utils.withGrid(6),
-      }),
-      wall6: new GameObject({
-        id: "wall6",
-        wall: true,
-        x: utils.withGrid(2),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(0.5),
-      }),
-      wall7: new GameObject({
-        id: "wall7",
-        wall: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      wall8: new GameObject({
-        id: "wall8",
-        wall: true,
-        x: utils.withGrid(7),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      event1: new GameObject({
-        id: "event1",
-        event: true,
-        x: utils.withGrid(4),
-        y: utils.withGrid(8),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
       door1: new GameObject({
         id: "door1",
         event: true,
@@ -245,35 +191,18 @@ window.OverworldMaps = {
       }),
     },
     cutsceneSpaces: {
-
-      ["event1"]: [
-        {
-          events: [
-            { who: "npcA", type: "walk",  direction: "left", spritedirection: "left" },
-            { who: "npcA", type: "stand",  direction: "right", time: 500 },
-            { type: "textMessage", text:"You can't stay there! "},
-            { type: "textMessage", text:"Go straight to the CS classroom. You don't want to be late right?"},
-            { type: "textMessage", text:"..."},
-            { type: "textMessage", text:"......."},
-            { type: "textMessage", text:"..........."},
-            { type: "textMessage", text:"Move!!!!!!!!!"},
-            { who: "npcA", type: "walk",  direction: "right", spritedirection: "right" },
-            { who: "npcA", type: "walk",  direction: "right", spritedirection: "right" },
-          ]
-        }
-      ],
       ["door1"]: [
         {
           events: [
-            { type: "changeMap", map: "classroom" }
+            { type: "changeMap", map: "braininside" }
           ]
         }
       ]
     }
   },
-  classroom: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/classroom.png",
-    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/classroomUpper.png",
+  braininside: {
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.gif",
+    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
@@ -282,250 +211,6 @@ window.OverworldMaps = {
         sizex: 50,
         sizey: 37,
         id: "hero",
-      }),
-      Wizard: new Person({
-        isMounted: true,
-        x: utils.withGrid(13),
-        y: utils.withGrid(20),
-        sizex: 80,
-        sizey: 149,
-        id: "Wizard",
-        src: "https://tianbinliu.github.io/CSA-FinalProject/images/character/wizard/WizardMrM.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "right", time: 1200 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "You made it!"},
-            ]
-          }
-        ]
-      }),
-    },
-    walls: {
-      table1left: new GameObject({
-        id: "table1left",
-        wall: true,
-        x: utils.withGrid(0), //table left 1
-        y: utils.withGrid(5),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(5),
-      }),
-      table1righttop: new GameObject({
-        id: "table1righttop",
-        wall: true,
-        x: utils.withGrid(2), //table left 1
-        y: utils.withGrid(5),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      table1rightbutton: new GameObject({
-        id: "table1rightbutton",
-        wall: true,
-        x: utils.withGrid(2), //table left 1
-        y: utils.withGrid(9),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      wall2: new GameObject({
-        id: "wall2",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(2.5),
-        sizex: utils.withGrid(19),
-        sizey: utils.withGrid(1),
-      }),
-      wall3: new GameObject({
-        id: "wall3",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(0.5),
-        sizey: utils.withGrid(22),
-      }),
-      wall4: new GameObject({
-        id: "wall4",
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(25),
-        sizex: utils.withGrid(19),
-        sizey: utils.withGrid(0.25),
-      }),
-      wall5: new GameObject({
-        id: "wall5",
-        wall: true,
-        x: utils.withGrid(18.5),
-        y: utils.withGrid(2),
-        sizex: utils.withGrid(0),
-        sizey: utils.withGrid(25),
-      }),
-
-      table2topleft: new GameObject({
-        id: "table2topleft",               //table middle 1
-        wall: true,
-        x: utils.withGrid(6.5),
-        y: utils.withGrid(5.5),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      table2topright: new GameObject({
-        id: "table2topright",               //table middle 1
-        wall: true,
-        x: utils.withGrid(11.5),
-        y: utils.withGrid(5.5),
-        sizex: utils.withGrid(1),
-        sizey: utils.withGrid(1),
-      }),
-      table2buttonleft: new GameObject({
-        id: "table2buttonleft",               //table middle 1
-        wall: true,
-        x: utils.withGrid(6.5),
-        y: utils.withGrid(10.5),
-        sizex: utils.withGrid(1.5),
-        sizey: utils.withGrid(1.5),
-      }),
-      table2buttonright: new GameObject({
-        id: "table2buttonright",               //table middle 1
-        wall: true,
-        x: utils.withGrid(11.5),
-        y: utils.withGrid(10.5),
-        sizex: utils.withGrid(1.5),
-        sizey: utils.withGrid(1.5),
-      }),
-
-      table3: new GameObject({
-        id: "table3",               //table left 2
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(12),
-        sizex: utils.withGrid(3),
-        sizey: utils.withGrid(4.5),
-      }),
-
-      table4: new GameObject({
-        id: "table4",               //table left 3
-        wall: true,
-        x: utils.withGrid(0),
-        y: utils.withGrid(18),
-        sizex: utils.withGrid(3),
-        sizey: utils.withGrid(4.5),
-      }),
-
-      table5: new GameObject({
-        id: "table5",               //table middle 2
-        wall: true,
-        x: utils.withGrid(7),
-        y: utils.withGrid(21.5),
-        sizex: utils.withGrid(4),
-        sizey: utils.withGrid(3.5),
-      }),
-
-      table6: new GameObject({
-        id: "table6",               //table right 1
-        wall: true,
-        x: utils.withGrid(16),
-        y: utils.withGrid(5.5),
-        sizex: utils.withGrid(3),
-        sizey: utils.withGrid(4.5),
-      }),
-
-      table7: new GameObject({
-        id: "table7",               //table right 2
-        wall: true,
-        x: utils.withGrid(16),
-        y: utils.withGrid(11.5),
-        sizex: utils.withGrid(3),
-        sizey: utils.withGrid(4.5),
-      }),
-
-      table8: new GameObject({
-        id: "table8",               //table right 3
-        wall: true,
-        x: utils.withGrid(16),
-        y: utils.withGrid(18.5),
-        sizex: utils.withGrid(3),
-        sizey: utils.withGrid(4.5),
-      }),
-
-      chair1: new GameObject({
-        id: "chair1",             //chair left 1
-        wall: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(7),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-
-      chair2: new GameObject({
-        id: "chair2",               // chair middle 1
-        wall: true,
-        x: utils.withGrid(8),
-        y: utils.withGrid(12),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-      
-      chair3: new GameObject({
-        id: "chair3",               // chair middle 2
-        wall: true,
-        x: utils.withGrid(12),
-        y: utils.withGrid(6),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-      chair4: new GameObject({
-        id: "chair4",               // chair middle 3
-        wall: true,
-        x: utils.withGrid(12),
-        y: utils.withGrid(9),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-
-      chair5: new GameObject({
-        id: "chair5",               // chair left 2
-        wall: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(13),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-      
-      chair6: new GameObject({
-        id: "chair6",               // chair left 3
-        wall: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(18),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-
-      chair7: new GameObject({
-        id: "chair7",               // chair left 3
-        wall: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(20),
-        sizex: utils.withGrid(2),
-        sizey: utils.withGrid(2),
-      }),
-
-      chair8: new GameObject({
-        id: "chair8",               // chair left 3
-        wall: true,
-        x: utils.withGrid(11.75),
-        y: utils.withGrid(22.75),
-        sizex: utils.withGrid(1.25),
-        sizey: utils.withGrid(1.25),
-      }),
-
-      bookshelf: new GameObject({
-        id: "bookshelf",               // chair left 3
-        wall: true,
-        x: utils.withGrid(15.75),
-        y: utils.withGrid(3),
-        sizex: utils.withGrid(2.25),
-        sizey: utils.withGrid(1),
       }),
     },
   },
