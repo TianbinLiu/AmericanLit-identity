@@ -168,7 +168,7 @@ window.OverworldMaps = {
     },
   },
   brainoutside: {
-    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.gif",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
