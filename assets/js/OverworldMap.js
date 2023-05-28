@@ -173,15 +173,15 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(4),
+        x: utils.withGrid(30),
+        y: utils.withGrid(34),
         sizex: 50,
         sizey: 37,
         id: "hero",
       }),
       brain: new Person({
         isMounted: true,
-        x: utils.withGrid(6),
+        x: utils.withGrid(26),
         y: utils.withGrid(9),
         sizex: 600,
         sizey: 338,
