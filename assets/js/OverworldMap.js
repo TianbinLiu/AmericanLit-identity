@@ -227,8 +227,8 @@ window.OverworldMaps = {
     }
   },
   braininside: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/street.jpg",
-    upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/street.jpg",
+    upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
