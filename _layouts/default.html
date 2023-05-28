@@ -1,19 +1,21 @@
+
 <!-- pages_python/_layouts/default.html
      customization added to original midnight theme found through GitHub Pages -->
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-
-  </head>
-  <body>
-      
-    <div class="wrapper">
-
-      <section>
+     <html lang="{{ site.lang | default: "en-US" }}">
+      <head>
+        {% include head-custom2.html %}
+    
+      </head>
+      <body>
+          
+        <div class="wrapper">
+    
+          <section>
+            {{ content }}
+               
+          </section>
            
-        {{ content }}
-           
-      </section>
-       
-  </body>
-      
-</html>
+      </body>
+          
+    </html>
+    

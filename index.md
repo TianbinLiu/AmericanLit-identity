@@ -74,6 +74,11 @@ body {
 <div class="game-container">
     <canvas class="game-canvas" width="352" height="198"></canvas>
 </div>
+<div id="video_wrapper">
+  <video autoplay loop>
+    <source src="https://drive.google.com/uc?export=view&id=1FFuAzlkyPJcKfCs7JXuldVXOTG0n28CH" type="video/mp4">
+  </video>
+</div>
 </body>
 
 <script src="{{ '/assets/js/utils.js' | relative_url }}" type="text/javascript"></script>
