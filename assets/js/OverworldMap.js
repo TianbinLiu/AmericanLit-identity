@@ -134,16 +134,16 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(25),
-        y: utils.withGrid(26),
+        x: utils.withGrid(55),
+        y: utils.withGrid(22),
         sizex: 50,
         sizey: 37,
         id: "hero",
       }),
       npcA: new Person({
         isMounted: true,
-        x: utils.withGrid(26),
-        y: utils.withGrid(29),
+        x: utils.withGrid(56),
+        y: utils.withGrid(25),
         sizex: 50,
         sizey: 37,
         id: "npcA",
@@ -174,15 +174,15 @@ window.OverworldMaps = {
       hero: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(30),
-        y: utils.withGrid(34),
+        y: utils.withGrid(85),
         sizex: 50,
         sizey: 37,
         id: "hero",
       }),
       brain: new Person({
         isMounted: true,
-        x: utils.withGrid(26),
-        y: utils.withGrid(9),
+        x: utils.withGrid(30),
+        y: utils.withGrid(50),
         sizex: 600,
         sizey: 338,
         id: "brain",
@@ -232,8 +232,8 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(3),
-        y: utils.withGrid(4),
+        x: utils.withGrid(76),
+        y: utils.withGrid(54),
         sizex: 50,
         sizey: 37,
         id: "hero",
