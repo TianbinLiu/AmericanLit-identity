@@ -227,7 +227,7 @@ window.OverworldMaps = {
     }
   },
   braininside: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/street.png",
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/street.jpg",
     upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
