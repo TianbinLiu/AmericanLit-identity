@@ -129,7 +129,7 @@ class OverworldMap {
 
 window.OverworldMaps = {
   DemoRoom: {
-    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/space.jpg",
     upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
@@ -168,7 +168,7 @@ window.OverworldMaps = {
     },
   },
   brainoutside: {
-    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/room.jpg",
     upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
