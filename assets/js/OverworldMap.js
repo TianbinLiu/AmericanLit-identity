@@ -210,7 +210,7 @@ window.OverworldMaps = {
       door1: new GameObject({
         id: "door1",
         event: true,
-        x: utils.withGrid(4),
+        x: utils.withGrid(5),
         y: utils.withGrid(9),
         sizex: utils.withGrid(1),
         sizey: utils.withGrid(1),
@@ -227,7 +227,7 @@ window.OverworldMaps = {
     }
   },
   braininside: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.gif",
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
