@@ -210,8 +210,8 @@ window.OverworldMaps = {
       door1: new GameObject({
         id: "door1",
         event: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(9),
+        x: utils.withGrid(29),
+        y: utils.withGrid(50),
         sizex: utils.withGrid(1),
         sizey: utils.withGrid(1),
       }),
