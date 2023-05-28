@@ -186,7 +186,7 @@ window.OverworldMaps = {
         sizex: 600,
         sizey: 338,
         id: "brain",
-        src: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/brain.png",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brain.png",
         behaviorLoop: [
           { type: "stand",  direction: "left", time: 800 },
           { type: "stand",  direction: "right", time: 1200 },
