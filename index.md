@@ -18,7 +18,7 @@ layout: default
 }
 
 body {
-  background: #333;
+  background: #000000;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -73,11 +73,6 @@ body {
 <body>
 <div class="game-container">
     <canvas class="game-canvas" width="352" height="198"></canvas>
-</div>
-<div id="video_wrapper">
-  <video autoplay loop>
-    <source src="https://drive.google.com/uc?export=view&id=1FFuAzlkyPJcKfCs7JXuldVXOTG0n28CH" type="video/mp4">
-  </video>
 </div>
 </body>
 

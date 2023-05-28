@@ -134,16 +134,16 @@ window.OverworldMaps = {
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(5),
-        y: utils.withGrid(6),
+        x: utils.withGrid(25),
+        y: utils.withGrid(26),
         sizex: 50,
         sizey: 37,
         id: "hero",
       }),
       npcA: new Person({
         isMounted: true,
-        x: utils.withGrid(6),
-        y: utils.withGrid(9),
+        x: utils.withGrid(26),
+        y: utils.withGrid(29),
         sizex: 50,
         sizey: 37,
         id: "npcA",
@@ -227,7 +227,7 @@ window.OverworldMaps = {
     }
   },
   braininside: {
-    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
+    lowerSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/street.png",
     upperSrc: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
