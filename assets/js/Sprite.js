@@ -23,6 +23,7 @@ class Sprite {
 
     //Configure Animation & Initial State
     this.animations = config.animations || {
+      "brain-idle-right": [ [7,0],[8,0],[9,0], ],
       "hero-idle-right": [ [7,0],[8,0],[9,0], ],
       "hero-idle-left" : [ [6,0],[5,0],[4,0], ],
       "hero-walk-left": [ [5,1],[4,1],[3,1],[2,1],[1,1], ],
@@ -117,6 +118,14 @@ class Sprite {
         x,y,
         40,74,
       );
+    }
+    else if(this.image.id === "brain"){
+        this.isLoaded && ctx.drawImage(this.image,
+          frameX * this.image.sizex, frameY * this.image.sizey,
+          this.image.sizex,this.image.sizey,
+          x,y,
+          60,33.8,
+        );
     }
 
 

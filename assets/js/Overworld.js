@@ -22,6 +22,7 @@ class Overworld {
        })
  
        //Draw Lower layer
+       
        this.map.drawLowerImage(this.ctx, cameraPerson);
  
        //Draw Game Objects

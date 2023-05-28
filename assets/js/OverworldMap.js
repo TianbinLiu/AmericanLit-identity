@@ -168,7 +168,7 @@ window.OverworldMaps = {
     },
   },
   brainoutside: {
-    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brain.gif",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.gif",
     upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
@@ -179,7 +179,33 @@ window.OverworldMaps = {
         sizey: 37,
         id: "hero",
       }),
+      brain: new Person({
+        isMounted: true,
+        x: utils.withGrid(6),
+        y: utils.withGrid(9),
+        sizex: 600,
+        sizey: 338,
+        id: "brain",
+        src: "https://tianbinliu.github.io/CSA-FinalProject/images/maps/brain.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "right", time: 1200 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
     },
+
     walls: {
       door1: new GameObject({
         id: "door1",
