@@ -137,8 +137,33 @@ class OverworldMap {
             ifisReach = true;
           }
         }
-        else if(object.id != "npcA"){
-          if(((nextCoords.x >= (object.x+3) && (nextCoords.x <= (object.x + object.sizex + 13))) && ((nextCoords.y >= object.y) &&  (nextCoords.y <= (object.y + object.sizey))))){
+        else if(object.id === "Chinaflag" || object.id === "healthysleep" || object.id === "coding"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (384)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
+            isReach = true;
+          }
+        }
+        else if(object.id === "jojo"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (455)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
+            isReach = true;
+          }
+        }
+        else if(object.id === "mum"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (341)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
+            isReach = true;
+          }
+        }
+        else if(object.id === "rationalthinking"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (340)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (340)))))){
+            isReach = true;
+          }
+        }
+        else if(object.id === "sister"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (200)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (267)))))){
+            isReach = true;
+          }
+        }
+        else if(object.id === "yugioh"){
+          if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (257)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
             isReach = true;
           }
         }
