@@ -236,7 +236,7 @@ window.OverworldMaps = {
       mum: new Person({
         isMounted: true,
         x: utils.withGrid(10),
-        y: utils.withGrid(60),
+        y: utils.withGrid(55),
         sizex: 1440,
         sizey: 1080,
         id: "mum",
@@ -257,7 +257,7 @@ window.OverworldMaps = {
       sister: new Person({
         isMounted: true,
         x: utils.withGrid(40),
-        y: utils.withGrid(60),
+        y: utils.withGrid(55),
         sizex: 1080,
         sizey: 1440,
         id: "sister",
@@ -303,7 +303,7 @@ window.OverworldMaps = {
       coding: new Person({
         isMounted: true,
         x: utils.withGrid(70),
-        y: utils.withGrid(60),
+        y: utils.withGrid(55),
         sizex: 1200,
         sizey: 800,
         id: "coding",
@@ -345,7 +345,7 @@ window.OverworldMaps = {
       rationalthinking: new Person({
         isMounted: true,
         x: utils.withGrid(90),
-        y: utils.withGrid(80),
+        y: utils.withGrid(55),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
