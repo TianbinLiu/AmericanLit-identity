@@ -139,32 +139,32 @@ class OverworldMap {
         }
         else if(object.id === "Chinaflag" || object.id === "healthysleep" || object.id === "coding"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (384)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
         else if(object.id === "jojo"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (455)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
         else if(object.id === "mum"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (341)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
         else if(object.id === "rationalthinking"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (340)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (340)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
         else if(object.id === "sister"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (200)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (267)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
         else if(object.id === "yugioh"){
           if(((nextCoords.x >= (object.x - 25) && (nextCoords.x <= (object.x - 25 + (257)))) && ((nextCoords.y >= (object.y - 37)) &&  (nextCoords.y <= (object.y - 37 + (256)))))){
-            isReach = true;
+            ifisReach = true;
           }
         }
 
@@ -240,22 +240,6 @@ window.OverworldMaps = {
         sizey: 338,
         id: "brain",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brain.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "left", time: 800 },
-          { type: "stand",  direction: "right", time: 1200 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
-            ]
-          }
-        ]
       }),
     },
 
@@ -302,12 +286,11 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "This is my mum."},
+              { type: "textMessage", text: "She lives with us(me and my sister) and sometimes When her tourist visa was about to expire she will switch position with my dad and come back to China."},
+              { type: "textMessage", text: "She likes playing golf even though she can't play really well."},
+              { type: "textMessage", text: "She is a contradictory person, one way she wants us to live a happy life and wants to give no expectation or pressure to us."},
+              { type: "textMessage", text: "But another way, she wants us to attend college and have a well-pay job that we are interested in."},
             ]
           }
         ]
@@ -327,12 +310,11 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "This is my sister."},
+              { type: "textMessage", text: "I know the image is not very clear, but that is a technological problem I can't solve. There is no way to zoom the picture without breaking the sharpness."},
+              { type: "textMessage", text: "Just like me, she is also studying in Del Norte."},
+              { type: "textMessage", text: "She likes singing and dancing(K-POP), and socializing. "},
+              { type: "textMessage", text: "Want to know more? Why don't you ask her by yourself?"},
             ]
           }
         ]
@@ -348,12 +330,10 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I was born in China and lived here for about 13 years of my life."},
+              { type: "textMessage", text: "I didn't come back to China for about 5 years in total after I came to the US."},
+              { type: "textMessage", text: "I will come back this year during the summer, not to relax but prepare for my SAT, college application, and CS project."},
+
             ]
           }
         ]
@@ -369,12 +349,9 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I like coding. If someone knows how to code, I believe he/she will also like coding."},
+              { type: "textMessage", text: "I'm learning how to use Javascript to build an online web game right now, as you see, this web is part of my work."},
+              { type: "textMessage", text: "Probably I will choose CS as my major."},
             ]
           }
         ]
@@ -390,12 +367,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I like sleeping, I believe anyone who doesn't get enough sleep likes to sleep."},
+              { type: "textMessage", text: "I usually get some sleep when I back home, so I can do my work better at night."},
             ]
           }
         ]
@@ -411,12 +384,9 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I believe in rational thinking. And I'm trying to keep myself as a rational person."},
+              { type: "textMessage", text: "Whatever I do, I will think before and after I start to do it."},
+              { type: "textMessage", text: "Emotional people often regret the consequences of their irrational actions in life. And I'm trying to have as less irrational actions in my life as possible."},
             ]
           }
         ]
@@ -432,12 +402,8 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I likes playing game like Yugioh Master Duel(card game)"},
+              { type: "textMessage", text: "I used to play MOBA or FPS, but it's boring if you don't have a friend to play with, especially if you already had play the games for thousands of hours."},
             ]
           }
         ]
@@ -453,12 +419,9 @@ window.OverworldMaps = {
         talking: [
           {
             events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
+              { type: "textMessage", text: "I like watching JoJo's Adventure, an Anime. And I watched all seasons of it."},
+              { type: "textMessage", text: "I admire those characters who have “golden spirit” in the anime."},
+              { type: "textMessage", text: "But if I had to choose, I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime."},
             ]
           }
         ]
