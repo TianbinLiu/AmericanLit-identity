@@ -42,13 +42,8 @@ class OverworldMap {
     Object.values(this.gameObjects).forEach(npc => {
       if(npc.isMounted){
         console.log("npc position(x): " + npc.x + ", " + "(y): " + npc.y + ", length: " + npc.sizex + ", width: " + npc.sizey)
-        if(npc.id === "npcA"){
+        if(npc.id != "brain"){
           if(((x >= (npc.x - (npc.sizex/4)) && (x <= (npc.x + (npc.sizex/4)))) && ((y >= (npc.y - (npc.sizey/10))) &&  (y <= (npc.y + (npc.sizey/10)))))){
-            isReach = true;
-          }
-        }
-        else if(npc.id === "Wizard"){
-          if(((x >= ((npc.x - npc.sizex/8) - (npc.sizex/8)) && (x <= ((npc.x - npc.sizex/8) + (npc.sizex/8)))) && ((y >= ((npc.y + npc.sizey/4) - (npc.sizey/40))) &&  (y <= ((npc.y + npc.sizey/4) + (npc.sizey/40)))))){
             isReach = true;
           }
         }
@@ -104,11 +99,17 @@ class OverworldMap {
     const match = Object.values(this.gameObjects).find(object => {
       let ifisReach = false;
       if(object.isMounted){
-        if(object.id != "brain"){
+        if(object.id === "npcA"){
           if(((nextCoords.x >= (object.x - (object.sizex/4)) && (nextCoords.x <= (object.x + (object.sizex/4)))) && ((nextCoords.y >= (object.y - (object.sizey/10))) &&  (nextCoords.y <= (object.y + (object.sizey/10)))))){
             ifisReach = true;
           }
         }
+        else if(object.id === "Wizard"){
+          if(((nextCoords.x >= ((object.x - object.sizex/8) - (object.sizex/8)) && (nextCoords.x <= ((object.x - object.sizex/8) + (object.sizex/8)))) && ((nextCoords.y >= ((object.y + object.sizey/4) - (object.sizey/40))) &&  (nextCoords.y <= ((object.y + object.sizey/4) + (object.sizey/40)))))){
+            ifisReach = true;
+          }
+        }
+
       return ifisReach;
       }
     });
@@ -232,31 +233,6 @@ window.OverworldMaps = {
         sizey: 37,
         id: "hero",
       }),
-      brain: new Person({
-        isMounted: true,
-        x: utils.withGrid(30),
-        y: utils.withGrid(50),
-        sizex: 600,
-        sizey: 338,
-        id: "brain",
-        src: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brain.png",
-        behaviorLoop: [
-          { type: "stand",  direction: "left", time: 800 },
-          { type: "stand",  direction: "right", time: 1200 },
-        ],
-        talking: [
-          {
-            events: [
-              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
-              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
-              { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
-              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
-              { type: "changeMap", map: "brainoutside" }
-            ]
-          }
-        ]
-      }),
       mum: new Person({
         isMounted: true,
         x: utils.withGrid(10),
@@ -368,8 +344,8 @@ window.OverworldMaps = {
       }),
       rationalthinking: new Person({
         isMounted: true,
-        x: utils.withGrid(30),
-        y: utils.withGrid(100),
+        x: utils.withGrid(90),
+        y: utils.withGrid(80),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
@@ -394,7 +370,7 @@ window.OverworldMaps = {
         sizex: 818,
         sizey: 816,
         id: "yugioh",
-        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/yugioh.jpg",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/yugioh.png",
         talking: [
           {
             events: [
