@@ -215,7 +215,7 @@ window.OverworldMaps = {
               { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
               { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
               { type: "textMessage", text: "..."},
-              { type: "textMessage", text: "Well, wants to know my identity? You the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "Well, want to know my identity? You the weirdest guy I have ever seen."},
               { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
               { type: "changeMap", map: "brainoutside" }
             ]
