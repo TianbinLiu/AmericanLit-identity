@@ -345,7 +345,7 @@ window.OverworldMaps = {
       rationalthinking: new Person({
         isMounted: true,
         x: utils.withGrid(90),
-        y: utils.withGrid(80),
+        y: utils.withGrid(60),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
