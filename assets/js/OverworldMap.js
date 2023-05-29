@@ -104,17 +104,11 @@ class OverworldMap {
     const match = Object.values(this.gameObjects).find(object => {
       let ifisReach = false;
       if(object.isMounted){
-        if(object.id === "npcA"){
+        if(object.id != "brain"){
           if(((nextCoords.x >= (object.x - (object.sizex/4)) && (nextCoords.x <= (object.x + (object.sizex/4)))) && ((nextCoords.y >= (object.y - (object.sizey/10))) &&  (nextCoords.y <= (object.y + (object.sizey/10)))))){
             ifisReach = true;
           }
         }
-        else if(object.id === "Wizard"){
-          if(((nextCoords.x >= ((object.x - object.sizex/8) - (object.sizex/8)) && (nextCoords.x <= ((object.x - object.sizex/8) + (object.sizex/8)))) && ((nextCoords.y >= ((object.y + object.sizey/4) - (object.sizey/40))) &&  (nextCoords.y <= ((object.y + object.sizey/4) + (object.sizey/40)))))){
-            ifisReach = true;
-          }
-        }
-
       return ifisReach;
       }
     });
@@ -227,16 +221,213 @@ window.OverworldMaps = {
     }
   },
   braininside: {
-    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/street.jpg",
+    lowerSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brainworld.jpeg",
     upperSrc: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/transparent.png",
     gameObjects: {
       hero: new Person({
         isPlayerControlled: true,
-        x: utils.withGrid(76),
-        y: utils.withGrid(54),
+        x: utils.withGrid(5),
+        y: utils.withGrid(37),
         sizex: 50,
         sizey: 37,
         id: "hero",
+      }),
+      brain: new Person({
+        isMounted: true,
+        x: utils.withGrid(30),
+        y: utils.withGrid(50),
+        sizex: 600,
+        sizey: 338,
+        id: "brain",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/maps/brain.png",
+        behaviorLoop: [
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "right", time: 1200 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      mum: new Person({
+        isMounted: true,
+        x: utils.withGrid(10),
+        y: utils.withGrid(60),
+        sizex: 1440,
+        sizey: 1080,
+        id: "mum",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/mum.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      sister: new Person({
+        isMounted: true,
+        x: utils.withGrid(40),
+        y: utils.withGrid(60),
+        sizex: 1080,
+        sizey: 1440,
+        id: "sister",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/sister.jpg",
+        behaviorLoop: [
+          { type: "stand",  direction: "left", time: 800 },
+          { type: "stand",  direction: "right", time: 1200 },
+        ],
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      Chinaflag: new Person({
+        isMounted: true,
+        x: utils.withGrid(80),
+        y: utils.withGrid(13),
+        sizex: 4256,
+        sizey: 2832,
+        id: "sister",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/Chinaflag.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      coding: new Person({
+        isMounted: true,
+        x: utils.withGrid(70),
+        y: utils.withGrid(60),
+        sizex: 1200,
+        sizey: 800,
+        id: "coding",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/coding.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      healthysleep: new Person({
+        isMounted: true,
+        x: utils.withGrid(100),
+        y: utils.withGrid(13),
+        sizex: 2121,
+        sizey: 1414,
+        id: "healthysleep",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/healthysleep.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      rationalthinking: new Person({
+        isMounted: true,
+        x: utils.withGrid(30),
+        y: utils.withGrid(100),
+        sizex: 1600,
+        sizey: 1600,
+        id: "rationalthinking",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/rationalthinking.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      yugioh: new Person({
+        isMounted: true,
+        x: utils.withGrid(60),
+        y: utils.withGrid(13),
+        sizex: 818,
+        sizey: 816,
+        id: "yugioh",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/yugioh.jpg",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
+      }),
+      jojo: new Person({
+        isMounted: true,
+        x: utils.withGrid(15),
+        y: utils.withGrid(13),
+        sizex: 600,
+        sizey: 338,
+        id: "jojo",
+        src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/jojo.png",
+        talking: [
+          {
+            events: [
+              { type: "textMessage", text: "Hi, Welcome to my spiritual world!"},
+              { type: "textMessage", text: "You are my first visitor today, sounds lucky huh."},
+              { type: "textMessage", text: "..."},
+              { type: "textMessage", text: "Well, wants to know my identity? You are the weirdest guy I have ever seen."},
+              { type: "textMessage", text: "It's hard to let a person to tell who he is, how about you just come into my brain to see it by yourself?"},
+              { type: "changeMap", map: "brainoutside" }
+            ]
+          }
+        ]
       }),
     },
   },

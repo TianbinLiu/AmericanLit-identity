@@ -29,6 +29,14 @@ class Sprite {
       [0,3],[1,3],[2,3],[3,3],[4,3],
       [0,4],[1,4],[2,4],[3,4],[4,4],
       [0,5],[1,5],[2,5],[3,5],[4,5], ],
+      "Chinaflag-idle-right": [ [0,0], ],
+      "coding-idle-right": [ [0,0], ],
+      "healthysleep-idle-right": [ [0,0], ],
+      "jojo-idle-right": [ [0,0], ],
+      "mum-idle-right": [ [0,0], ],
+      "rationalthinking-idle-right": [ [0,0], ],
+      "sister-idle-right": [ [0,0], ],
+      "yugioh-idle-right": [ [0,0], ],
       "hero-idle-right": [ [7,0],[8,0],[9,0], ],
       "hero-idle-left" : [ [6,0],[5,0],[4,0], ],
       "hero-walk-left": [ [5,1],[4,1],[3,1],[2,1],[1,1], ],
@@ -131,6 +139,65 @@ class Sprite {
           x,y,
           60,33.8,
         );
+    }
+    else if(this.image.id === "Chinaflag" || this.image.id === "healthysleep"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        384,256,
+      );
+    }
+    else if(this.image.id === "coding"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        384,256,
+      );
+    }
+    else if(this.image.id === "jojo"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        455,256,
+      );
+    }
+
+    else if(this.image.id === "mum"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        341,256,
+      );
+    }
+    else if(this.image.id === "rationalthinking"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        340,340,
+      );
+    }
+
+    else if(this.image.id === "sister"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        200,267,
+      );
+    }
+
+    else if(this.image.id === "yugioh"){
+      this.isLoaded && ctx.drawImage(this.image,
+        frameX * this.image.sizex, frameY * this.image.sizey,
+        this.image.sizex,this.image.sizey,
+        x,y,
+        257,256,
+      );
     }
 
 
