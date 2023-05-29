@@ -123,7 +123,11 @@ class OverworldMap {
 
     this.isCutscenePlaying = false;
 
-    Object.values(this.gameObjects).forEach(object => object.doBehaviorEvent(this))
+      Object.values(this.gameObjects).forEach(object => {
+        if(!object.picture){
+        object.doBehaviorEvent(this)
+        }
+      })
   }
 
   checkForActionCutscene() {
@@ -281,13 +285,14 @@ window.OverworldMaps = {
         y: utils.withGrid(50),
         sizex: 1440,
         sizey: 1080,
+        picture: true,
         id: "mum",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/mum.jpg",
         talking: [
           {
             events: [
               { type: "textMessage", text: "This is my mum."},
-              { type: "textMessage", text: "She lives with us(me and my sister) and sometimes When her tourist visa was about to expire she will switch position with my dad and come back to China."},
+              { type: "textMessage", text: "She lives with us(me and my sister) and sometimes when her tourist visa was about to expire she will switch position with my dad and come back to China."},
               { type: "textMessage", text: "She likes playing golf even though she can't play really well."},
               { type: "textMessage", text: "She is a contradictory person, one way she wants us to live a happy life and wants to give no expectation or pressure to us."},
               { type: "textMessage", text: "But another way, she wants us to attend college and have a well-pay job that we are interested in."},
@@ -301,6 +306,7 @@ window.OverworldMaps = {
         y: utils.withGrid(50),
         sizex: 1080,
         sizey: 1440,
+        picture: true,
         id: "sister",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/sister.jpg",
         behaviorLoop: [
@@ -325,6 +331,7 @@ window.OverworldMaps = {
         y: utils.withGrid(13),
         sizex: 4256,
         sizey: 2832,
+        picture: true,
         id: "Chinaflag",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/Chinaflag.jpg",
         talking: [
@@ -344,6 +351,7 @@ window.OverworldMaps = {
         y: utils.withGrid(50),
         sizex: 1200,
         sizey: 800,
+        picture: true,
         id: "coding",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/coding.jpg",
         talking: [
@@ -362,6 +370,7 @@ window.OverworldMaps = {
         y: utils.withGrid(13),
         sizex: 2121,
         sizey: 1414,
+        picture: true,
         id: "healthysleep",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/healthysleep.jpg",
         talking: [
@@ -379,6 +388,7 @@ window.OverworldMaps = {
         y: utils.withGrid(45),
         sizex: 1600,
         sizey: 1600,
+        picture: true,
         id: "rationalthinking",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/rationalthinking.jpg",
         talking: [
@@ -397,6 +407,7 @@ window.OverworldMaps = {
         y: utils.withGrid(13),
         sizex: 818,
         sizey: 816,
+        picture: true,
         id: "yugioh",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/yugioh.png",
         talking: [
@@ -414,6 +425,7 @@ window.OverworldMaps = {
         y: utils.withGrid(13),
         sizex: 1920,
         sizey: 1080,
+        picture: true,
         id: "jojo",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/jojo.png",
         talking: [

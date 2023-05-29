@@ -7,6 +7,7 @@ class GameObject {
     this.y = config.y || 0;
     this.sizex = config.sizex || 0;
     this.sizey = config.sizey || 0;
+    this.picture = config.picture || false;
     this.wall = config.wall || false;
     this.sprite = new Sprite({
       gameObject: this,
