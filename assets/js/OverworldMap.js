@@ -43,7 +43,7 @@ class OverworldMap {
       if(npc.isMounted){
         console.log("npc position(x): " + npc.x + ", " + "(y): " + npc.y + ", length: " + npc.sizex + ", width: " + npc.sizey)
         if(npc.id != "brain"){
-          if(((x >= (npc.x - (npc.sizex/4)) && (x <= (npc.x + (npc.sizex/4)))) && ((y >= (npc.y - (npc.sizey/10))) &&  (y <= (npc.y + (npc.sizey/10)))))){
+          if(((x >= (npc.x+3) && (x <= (npc.x + npc.sizex + 13))) && ((y >= npc.y) &&  (y <= (npc.y + npc.sizey))))){
             isReach = true;
           }
         }
@@ -345,7 +345,7 @@ window.OverworldMaps = {
       rationalthinking: new Person({
         isMounted: true,
         x: utils.withGrid(90),
-        y: utils.withGrid(60),
+        y: utils.withGrid(80),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
