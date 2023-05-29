@@ -48,7 +48,7 @@ class OverworldMap {
               isReach = true;
             }
           }
-          else if(npc.id === "Chinaflag" || this.image.id === "healthysleep" || this.image.id === "coding"){
+          else if(npc.id === "Chinaflag" || npc.id === "healthysleep" || npc.id === "coding"){
             if(((x >= (npc.x - (384/2)) && (x <= (npc.x + (384/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
               isReach = true;
             }
