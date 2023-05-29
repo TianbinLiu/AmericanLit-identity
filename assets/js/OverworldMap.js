@@ -49,32 +49,32 @@ class OverworldMap {
             }
           }
           else if(npc.id === "Chinaflag" || npc.id === "healthysleep" || npc.id === "coding"){
-            if(((x >= (npc.x) && (x <= (npc.x + (384)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (384)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "jojo"){
-            if(((x >= (npc.x) && (x <= (npc.x + (455)))) && ((y >= (npc.y )) &&  (y <= (npc.y + (256)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (455)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "mum"){
-            if(((x >= (npc.x) && (x <= (npc.x + (341)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (341)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "rationalthinking"){
-            if(((x >= (npc.x) && (x <= (npc.x + (340)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (340)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (340)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (340)))))){
               isReach = true;
             }
           }
           else if(npc.id === "sister"){
-            if(((x >= (npc.x) && (x <= (npc.x + (200)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (267)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (200)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (267)))))){
               isReach = true;
             }
           }
           else if(npc.id === "yugioh"){
-            if(((x >= (npc.x) && (x <= (npc.x + (257)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
+            if(((x >= (npc.x - 25) && (x <= (npc.x - 25 + (257)))) && ((y >= (npc.y - 37)) &&  (y <= (npc.y - 37 + (256)))))){
               isReach = true;
             }
           }
