@@ -49,32 +49,32 @@ class OverworldMap {
             }
           }
           else if(npc.id === "Chinaflag" || npc.id === "healthysleep" || npc.id === "coding"){
-            if(((x >= (npc.x - (384/2)) && (x <= (npc.x + (384/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (384)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "jojo"){
-            if(((x >= (npc.x - (455/2)) && (x <= (npc.x + (455/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (455)))) && ((y >= (npc.y )) &&  (y <= (npc.y + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "mum"){
-            if(((x >= (npc.x - (341/2)) && (x <= (npc.x + (341/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (341)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
               isReach = true;
             }
           }
           else if(npc.id === "rationalthinking"){
-            if(((x >= (npc.x - (340/2)) && (x <= (npc.x + (340/2)))) && ((y >= (npc.y - (340/2))) &&  (y <= (npc.y + (340/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (340)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (340)))))){
               isReach = true;
             }
           }
           else if(npc.id === "sister"){
-            if(((x >= (npc.x - (200/2)) && (x <= (npc.x + (200/2)))) && ((y >= (npc.y - (267/2))) &&  (y <= (npc.y + (267/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (200)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (267)))))){
               isReach = true;
             }
           }
           else if(npc.id === "yugioh"){
-            if(((x >= (npc.x - (257/2)) && (x <= (npc.x + (257/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+            if(((x >= (npc.x) && (x <= (npc.x + (257)))) && ((y >= (npc.y)) &&  (y <= (npc.y + (256)))))){
               isReach = true;
             }
           }
@@ -421,8 +421,8 @@ window.OverworldMaps = {
         isMounted: true,
         x: utils.withGrid(15),
         y: utils.withGrid(13),
-        sizex: 600,
-        sizey: 338,
+        sizex: 1920,
+        sizey: 1080,
         id: "jojo",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/jojo.png",
         talking: [
