@@ -40,15 +40,10 @@ class OverworldMap {
     console.log("character(control) move next position(x): " + x + ", " + "(y): " + y)
     let isReach = false;
     Object.values(this.gameObjects).forEach(npc => {
-      if(npc.isMounted && npc.id != "brain"){
+      if(npc.isMounted){
         console.log("npc position(x): " + npc.x + ", " + "(y): " + npc.y + ", length: " + npc.sizex + ", width: " + npc.sizey)
         if(npc.id === "npcA"){
           if(((x >= ((npc.x - npc.sizex/8) - (npc.sizex/8)) && (x <= ((npc.x - npc.sizex/8) + (npc.sizex/8)))) && ((y >= ((npc.y + npc.sizey/4) - (npc.sizey/40))) &&  (y <= ((npc.y + npc.sizey/4) + (npc.sizey/40)))))){
-            isReach = true;
-          }
-        }
-        else if(npc.id != "npcA"){
-          if(((x >= (npc.x+3) && (x <= (npc.x + npc.sizex + 13))) && ((y >= npc.y) &&  (y <= (npc.y + npc.sizey))))){
             isReach = true;
           }
         }
@@ -103,18 +98,18 @@ class OverworldMap {
     const nextCoords = utils.heronextPosition(hero.x, hero.y, hero.direction);
     const match = Object.values(this.gameObjects).find(object => {
       let ifisReach = false;
-      if(object.isMounted && object.id != "brain"){
+      if(object.isMounted){
         if(object.id === "npcA"){
           if(((nextCoords.x >= (object.x - (object.sizex/4)) && (nextCoords.x <= (object.x + (object.sizex/4)))) && ((nextCoords.y >= (object.y - (object.sizey/10))) &&  (nextCoords.y <= (object.y + (object.sizey/10)))))){
             ifisReach = true;
           }
         }
-        else if(object.id != "npcA"){
-          if(((nextCoords.x >= (object.x+3) && (nextCoords.x <= (object.x + object.sizex + 13))) && ((nextCoords.y >= object.y) &&  (nextCoords.y <= (object.y + object.sizey))))){
-            isReach = true;
+        else if(object.id === "Wizard"){
+          if(((nextCoords.x >= ((object.x - object.sizex/8) - (object.sizex/8)) && (nextCoords.x <= ((object.x - object.sizex/8) + (object.sizex/8)))) && ((nextCoords.y >= ((object.y + object.sizey/4) - (object.sizey/40))) &&  (nextCoords.y <= ((object.y + object.sizey/4) + (object.sizey/40)))))){
+            ifisReach = true;
           }
         }
-        
+
       return ifisReach;
       }
     });
@@ -241,7 +236,7 @@ window.OverworldMaps = {
       mum: new Person({
         isMounted: true,
         x: utils.withGrid(10),
-        y: utils.withGrid(55),
+        y: utils.withGrid(50),
         sizex: 1440,
         sizey: 1080,
         id: "mum",
@@ -262,7 +257,7 @@ window.OverworldMaps = {
       sister: new Person({
         isMounted: true,
         x: utils.withGrid(40),
-        y: utils.withGrid(55),
+        y: utils.withGrid(50),
         sizex: 1080,
         sizey: 1440,
         id: "sister",
@@ -308,7 +303,7 @@ window.OverworldMaps = {
       coding: new Person({
         isMounted: true,
         x: utils.withGrid(70),
-        y: utils.withGrid(55),
+        y: utils.withGrid(50),
         sizex: 1200,
         sizey: 800,
         id: "coding",
@@ -350,7 +345,7 @@ window.OverworldMaps = {
       rationalthinking: new Person({
         isMounted: true,
         x: utils.withGrid(90),
-        y: utils.withGrid(55),
+        y: utils.withGrid(50),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
