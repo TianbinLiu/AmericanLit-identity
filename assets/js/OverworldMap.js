@@ -48,8 +48,33 @@ class OverworldMap {
               isReach = true;
             }
           }
-          else if(npc.id != "npcA"){
-            if(((x >= (npc.x+3) && (x <= (npc.x + npc.sizex + 13))) && ((y >= npc.y) &&  (y <= (npc.y + npc.sizey))))){
+          else if(npc.id === "Chinaflag" || this.image.id === "healthysleep" || this.image.id === "coding"){
+            if(((x >= (npc.x - (384/2)) && (x <= (npc.x + (384/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id === "jojo"){
+            if(((x >= (npc.x - (455/2)) && (x <= (npc.x + (455/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id === "mum"){
+            if(((x >= (npc.x - (341/2)) && (x <= (npc.x + (341/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id === "rationalthinking"){
+            if(((x >= (npc.x - (340/2)) && (x <= (npc.x + (340/2)))) && ((y >= (npc.y - (340/2))) &&  (y <= (npc.y + (340/2)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id === "sister"){
+            if(((x >= (npc.x - (200/2)) && (x <= (npc.x + (200/2)))) && ((y >= (npc.y - (267/2))) &&  (y <= (npc.y + (267/2)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id === "yugioh"){
+            if(((x >= (npc.x - (257/2)) && (x <= (npc.x + (257/2)))) && ((y >= (npc.y - (256/2))) &&  (y <= (npc.y + (256/2)))))){
               isReach = true;
             }
           }

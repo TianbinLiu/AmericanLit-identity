@@ -140,15 +140,7 @@ class Sprite {
           60,33.8,
         );
     }
-    else if(this.image.id === "Chinaflag" || this.image.id === "healthysleep"){
-      this.isLoaded && ctx.drawImage(this.image,
-        frameX * this.image.sizex, frameY * this.image.sizey,
-        this.image.sizex,this.image.sizey,
-        x,y,
-        384,256,
-      );
-    }
-    else if(this.image.id === "coding"){
+    else if(this.image.id === "Chinaflag" || this.image.id === "healthysleep" || this.image.id === "coding"){
       this.isLoaded && ctx.drawImage(this.image,
         frameX * this.image.sizex, frameY * this.image.sizey,
         this.image.sizex,this.image.sizey,
