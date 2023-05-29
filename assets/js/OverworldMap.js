@@ -317,7 +317,8 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "This is my sister."},
-              { type: "textMessage", text: "I know the image is not very clear, but that is a technological problem I can't solve. There is no way to zoom the picture without breaking the sharpness."},
+              { type: "textMessage", text: "I know the image is not very clear, but that is a technological problem I can't solve."},
+              { type: "textMessage", text: "There is no way to zoom the picture without breaking the sharpness."},
               { type: "textMessage", text: "Just like me, she is also studying in Del Norte."},
               { type: "textMessage", text: "She likes singing and dancing(K-POP), and socializing. "},
               { type: "textMessage", text: "Want to know more? Why don't you ask her by yourself?"},
@@ -396,8 +397,10 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "I believe in rational thinking. And I'm trying to keep myself as a rational person."},
               { type: "textMessage", text: "Whatever I do, I will think before and after I start to do it."},
-              { type: "textMessage", text: "Emotional people often regret the consequences of their irrational actions in life. And I'm trying to have as less irrational actions in my life as possible."},
+              { type: "textMessage", text: "Emotional people often regret the consequences of their irrational actions in life."},
+              { type: "textMessage", text: "And I'm trying to have as less irrational actions in my life as possible."},
             ]
+            
           }
         ]
       }),
@@ -414,7 +417,8 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "I likes playing game like Yugioh Master Duel(card game)"},
-              { type: "textMessage", text: "I used to play MOBA or FPS, but it's boring if you don't have a friend to play with, especially if you already had play the games for thousands of hours."},
+              { type: "textMessage", text: "I used to play MOBA or FPS, but it's boring if you don't have a friend to play with."},
+              { type: "textMessage", text: "Especially if you already had play the games for thousands of hours."},
             ]
           }
         ]
@@ -433,7 +437,8 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "I like watching JoJo's Adventure, an Anime. And I watched all seasons of it."},
               { type: "textMessage", text: "I admire those characters who have “golden spirit” in the anime."},
-              { type: "textMessage", text: "But if I had to choose, I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime, or Kira Yoshikage, a “normal” office worker."},
+              { type: "textMessage", text: "But if I had to choose, I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime,"},
+              { type: "textMessage", text: "or Kira Yoshikage, a “normal” office worker."},
             ]
           }
         ]
