@@ -42,11 +42,19 @@ class OverworldMap {
     Object.values(this.gameObjects).forEach(npc => {
       if(npc.isMounted){
         console.log("npc position(x): " + npc.x + ", " + "(y): " + npc.y + ", length: " + npc.sizex + ", width: " + npc.sizey)
-        if(npc.id === "npcA"){
-          if(((x >= ((npc.x - npc.sizex/8) - (npc.sizex/8)) && (x <= ((npc.x - npc.sizex/8) + (npc.sizex/8)))) && ((y >= ((npc.y + npc.sizey/4) - (npc.sizey/40))) &&  (y <= ((npc.y + npc.sizey/4) + (npc.sizey/40)))))){
-            isReach = true;
+        if(npc.id != "brain"){
+          if(npc.id === "npcA"){
+            if(((x >= (npc.x - (npc.sizex/4)) && (x <= (npc.x + (npc.sizex/4)))) && ((y >= (npc.y - (npc.sizey/10))) &&  (y <= (npc.y + (npc.sizey/10)))))){
+              isReach = true;
+            }
+          }
+          else if(npc.id != "npcA"){
+            if(((x >= (npc.x+3) && (x <= (npc.x + npc.sizex + 13))) && ((y >= npc.y) &&  (y <= (npc.y + npc.sizey))))){
+              isReach = true;
+            }
           }
         }
+
       }
     })
     Object.values(this.walls).forEach(wall => {
@@ -104,9 +112,9 @@ class OverworldMap {
             ifisReach = true;
           }
         }
-        else if(object.id === "Wizard"){
-          if(((nextCoords.x >= ((object.x - object.sizex/8) - (object.sizex/8)) && (nextCoords.x <= ((object.x - object.sizex/8) + (object.sizex/8)))) && ((nextCoords.y >= ((object.y + object.sizey/4) - (object.sizey/40))) &&  (nextCoords.y <= ((object.y + object.sizey/4) + (object.sizey/40)))))){
-            ifisReach = true;
+        else if(object.id != "npcA"){
+          if(((nextCoords.x >= (object.x+3) && (nextCoords.x <= (object.x + object.sizex + 13))) && ((nextCoords.y >= object.y) &&  (nextCoords.y <= (object.y + object.sizey))))){
+            isReach = true;
           }
         }
 
@@ -344,8 +352,8 @@ window.OverworldMaps = {
       }),
       rationalthinking: new Person({
         isMounted: true,
-        x: utils.withGrid(90),
-        y: utils.withGrid(50),
+        x: utils.withGrid(105),
+        y: utils.withGrid(45),
         sizex: 1600,
         sizey: 1600,
         id: "rationalthinking",
