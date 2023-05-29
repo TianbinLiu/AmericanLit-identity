@@ -99,14 +99,9 @@ class OverworldMap {
     const match = Object.values(this.gameObjects).find(object => {
       let ifisReach = false;
       if(object.isMounted){
-        if(object.id === "npcA"){
-          if(((nextCoords.x >= (object.x - (object.sizex/4)) && (nextCoords.x <= (object.x + (object.sizex/4)))) && ((nextCoords.y >= (object.y - (object.sizey/10))) &&  (nextCoords.y <= (object.y + (object.sizey/10)))))){
-            ifisReach = true;
-          }
-        }
-        else if(object.id === "Wizard"){
-          if(((nextCoords.x >= ((object.x - object.sizex/8) - (object.sizex/8)) && (nextCoords.x <= ((object.x - object.sizex/8) + (object.sizex/8)))) && ((nextCoords.y >= ((object.y + object.sizey/4) - (object.sizey/40))) &&  (nextCoords.y <= ((object.y + object.sizey/4) + (object.sizey/40)))))){
-            ifisReach = true;
+        if(object.id != "brain"){
+          if(((nextCoords.x >= (object.x+3) && (nextCoords.x <= (object.x + object.sizex + 13))) && ((nextCoords.y >= object.y) &&  (nextCoords.y <= (object.y + object.sizey))))){
+            isReach = true;
           }
         }
 
