@@ -42,7 +42,12 @@ class OverworldMap {
     Object.values(this.gameObjects).forEach(npc => {
       if(npc.isMounted){
         console.log("npc position(x): " + npc.x + ", " + "(y): " + npc.y + ", length: " + npc.sizex + ", width: " + npc.sizey)
-        if(npc.id != "brain"){
+        if(npc.id === "npcA"){
+          if(((x >= ((npc.x - npc.sizex/8) - (npc.sizex/8)) && (x <= ((npc.x - npc.sizex/8) + (npc.sizex/8)))) && ((y >= ((npc.y + npc.sizey/4) - (npc.sizey/40))) &&  (y <= ((npc.y + npc.sizey/4) + (npc.sizey/40)))))){
+            isReach = true;
+          }
+        }
+        else if(npc.id != "brain"){
           if(((x >= (npc.x+3) && (x <= (npc.x + npc.sizex + 13))) && ((y >= npc.y) &&  (y <= (npc.y + npc.sizey))))){
             isReach = true;
           }
@@ -99,12 +104,17 @@ class OverworldMap {
     const match = Object.values(this.gameObjects).find(object => {
       let ifisReach = false;
       if(object.isMounted){
-        if(object.id != "brain"){
+        if(object.id === "npcA"){
+          if(((nextCoords.x >= (object.x - (object.sizex/4)) && (nextCoords.x <= (object.x + (object.sizex/4)))) && ((nextCoords.y >= (object.y - (object.sizey/10))) &&  (nextCoords.y <= (object.y + (object.sizey/10)))))){
+            ifisReach = true;
+          }
+        }
+        else if(object.id != "brain"){
           if(((nextCoords.x >= (object.x+3) && (nextCoords.x <= (object.x + object.sizex + 13))) && ((nextCoords.y >= object.y) &&  (nextCoords.y <= (object.y + object.sizey))))){
             isReach = true;
           }
         }
-
+        
       return ifisReach;
       }
     });
