@@ -318,7 +318,7 @@ window.OverworldMaps = {
         y: utils.withGrid(13),
         sizex: 4256,
         sizey: 2832,
-        id: "sister",
+        id: "Chinaflag",
         src: "https://tianbinliu.github.io/AmericanLit-identity/images/identity/Chinaflag.jpg",
         talking: [
           {
@@ -356,7 +356,7 @@ window.OverworldMaps = {
       }),
       healthysleep: new Person({
         isMounted: true,
-        x: utils.withGrid(100),
+        x: utils.withGrid(110),
         y: utils.withGrid(13),
         sizex: 2121,
         sizey: 1414,
