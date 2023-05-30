@@ -292,7 +292,8 @@ window.OverworldMaps = {
           {
             events: [
               { type: "textMessage", text: "This is my mum."},
-              { type: "textMessage", text: "She lives with us(me and my sister) and sometimes when her tourist visa was about to expire she will switch position with my dad and come back to China."},
+              { type: "textMessage", text: "She lives with us(me and my sister) and sometimes when her tourist visa was about to expire "},
+              { type: "textMessage", text: "she will switch position with my dad and come back to China."},
               { type: "textMessage", text: "She likes playing golf even though she can't play really well."},
               { type: "textMessage", text: "She is a contradictory person, one way she wants us to live a happy life and wants to give no expectation or pressure to us."},
               { type: "textMessage", text: "But another way, she wants us to attend college and have a well-pay job that we are interested in."},
