@@ -438,7 +438,8 @@ window.OverworldMaps = {
             events: [
               { type: "textMessage", text: "I like watching JoJo's Adventure, an Anime. And I watched all seasons of it."},
               { type: "textMessage", text: "I admire those characters who have “golden spirit” in the anime."},
-              { type: "textMessage", text: "But if I had to choose, I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime,"},
+              { type: "textMessage", text: "But if I had to choose, "},
+              { type: "textMessage", text: "I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime,"},
               { type: "textMessage", text: "or Kira Yoshikage, a “normal” office worker."},
             ]
           }
