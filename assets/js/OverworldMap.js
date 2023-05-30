@@ -440,7 +440,7 @@ window.OverworldMaps = {
               { type: "textMessage", text: "I admire those characters who have “golden spirit” in the anime."},
               { type: "textMessage", text: "But if I had to choose, "},
               { type: "textMessage", text: "I would prefer to be the “savior of the wicked” just like Dio, one of the main villains in the anime,"},
-              { type: "textMessage", text: "or Kira Yoshikage, a “normal” office worker. :)"},
+              { type: "textMessage", text: "or Kira Yoshikage, a “normal” office worker. :), yes “normal”, don't ask your friend who watch JoJo"},
             ]
           }
         ]
